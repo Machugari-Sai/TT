@@ -53,6 +53,8 @@ The backend verifies password hashes, stores an HttpOnly session cookie, protect
 
 ## Deployment
 
-Use a Node 18+ service with start command `npm start`, configure `HOST=0.0.0.0` when required by the platform, enable `NODE_ENV=production`, and serve through HTTPS. No deployment has been performed by this repository.
+For the complete application, use a Node 18+ service with start command `npm start`, configure `HOST=0.0.0.0` when required by the platform, enable `NODE_ENV=production`, and serve through HTTPS.
+
+The static frontend can be deployed to Vercel from the repository root. The checked-in [`vercel.json`](vercel.json) sets `Frontend/public` as Vercel's output directory, which includes the `index.html` entry point and all static assets. Vercel will not provide the stateful Node backend or durable JSON persistence; deploy that backend separately and configure the frontend/API cookie architecture for the chosen domains before relying on login or other `/api/*` features.
 
 See [docs/deployment.md](docs/deployment.md) for the recommended production architecture and the limitations of deploying the current stateful backend directly alongside a Vercel static frontend.
