@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in or create a reader account for Two Quill Stories.">
+  <title>Enter the Story | Two Quill Stories</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+  <main class="auth-page auth-page-redesign">
+    <div class="auth-paper-grain" aria-hidden="true"></div>
+    <header class="auth-topbar">
+      <a class="auth-brand" href="auth.html" aria-label="Two Quill Stories sign in">
+        <span class="auth-brand-mark"><img src="assets/brand/two-quill-stories-logo.jpeg" alt=""></span>
+        <span><strong>Two Quill</strong><small>Stories</small></span>
+      </a>
+      <span class="auth-secure-note"><span aria-hidden="true">●</span> A private reader space</span>
+    </header>
+
+    <section class="auth-composition" aria-label="Reader account access">
+      <div class="auth-story-panel">
+        <div class="auth-story-copy">
+          <p class="auth-kicker"><span></span> Two Quill Stories</p>
+          <h1>Every story begins with a <em>single word.</em></h1>
+          <p class="auth-story-lede">Take a quiet seat and return to the realms waiting between the pages. Your next chapter is already open.</p>
+          <div class="auth-story-signature"><span class="auth-rule"></span><span>Read slowly. Dream widely.</span></div>
+        </div>
+        <div class="auth-book-art" aria-hidden="true">
+          <span class="auth-moon"></span><span class="auth-star star-one">✦</span><span class="auth-star star-two">✧</span>
+          <div class="auth-book"><span class="book-page book-page-left"></span><span class="book-page book-page-right"></span><span class="book-spine"></span><span class="auth-quill"></span></div>
+        </div>
+        <span class="auth-story-index" aria-hidden="true">TQS / 01</span>
+      </div>
+
+      <div class="auth-card">
+        <div class="auth-card-intro">
+          <p class="auth-card-eyebrow">Your reader account</p>
+          <h2 data-auth-heading>Welcome back.</h2>
+          <p data-auth-description>Sign in to continue your journey through the SAK Universe.</p>
+        </div>
+        <div class="auth-tabs" role="tablist" aria-label="Account access">
+          <button class="auth-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="login-panel" data-auth-tab="login">Sign in</button>
+          <button class="auth-tab" type="button" role="tab" aria-selected="false" aria-controls="register-panel" data-auth-tab="register">Create account</button>
+        </div>
+
+        <form class="auth-form auth-form-redesign is-active" id="login-panel" role="tabpanel" data-auth-panel="login" data-login-form>
+          <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label>Password<span class="password-field"><input type="password" name="password" autocomplete="current-password" minlength="4" placeholder="Enter your password" required><button type="button" class="password-toggle" data-password-toggle aria-label="Show password">Show</button></span></label>
+          <button class="auth-submit auth-submit-redesign" type="submit"><span>Sign in</span><span aria-hidden="true">→</span></button>
+          <p class="auth-form-status" data-login-status role="status" aria-live="polite"></p>
+        </form>
+
+        <form class="auth-form auth-form-redesign" id="register-panel" role="tabpanel" data-auth-panel="register" data-register-form hidden>
+          <label>Full name<input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Your name" required></label>
+          <label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label>Password<span class="password-field"><input type="password" name="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required><button type="button" class="password-toggle" data-password-toggle aria-label="Show password">Show</button></span></label>
+          <div class="auth-form-row"><label>Gender<select name="gender" required><option value="">Choose</option><option value="male">Male</option><option value="female">Female</option></select></label><label>Date of birth<input type="date" name="dob" required></label></div>
+          <button class="auth-submit auth-submit-redesign" type="submit"><span>Create account</span><span aria-hidden="true">→</span></button>
+          <p class="auth-form-status" data-register-status role="status" aria-live="polite"></p>
+        </form>
+        <p class="auth-card-footer">By continuing, you enter a world of original stories.</p>
+      </div>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>

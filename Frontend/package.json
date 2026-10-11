@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "scripts": {
+    "check": "node --check public/script.js && node --check public/auth.js && node --check public/admin.js && node --check public/flames.js && node --check public/flames-reader.js"
+  }
+}

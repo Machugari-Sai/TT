@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "npm --prefix Backend start",
+    "check": "npm --prefix Backend run check",
+    "test": "npm --prefix Backend test",
+    "start:backend": "npm --prefix Backend start",
+    "check:frontend": "npm --prefix Frontend run check"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

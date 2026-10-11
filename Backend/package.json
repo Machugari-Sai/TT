@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/main/server.js",
+    "check": "node --check src/main/server.js && node --check ../Frontend/public/script.js && node --check ../Frontend/public/auth.js && node --check ../Frontend/public/admin.js && node --check ../Frontend/public/flames.js && node --check ../Frontend/public/flames-reader.js",
+    "test": "npm run check"
+  },
+  "engines": { "node": ">=18" }
+}
